@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiber Piscinas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img id="logo" src="img/logo.png" alt="Fiber Piscinas Logo">
+  <h1>Fiber Piscinas</h1>
+  <p>Encontre a piscina ideal para seu espaço</p>
+</header>
+
+<main>
+
+<section class="form-container">
+  <h2>Simule seu orçamento</h2>
+  <p class="form-helper">Informe seu WhatsApp para registrar o atendimento e receber a recomendação.</p>
+
+  <form id="form">
+    <label for="nomeInput">Nome</label>
+    <input
+      type="text"
+      id="nomeInput"
+      name="nome"
+      placeholder="Seu nome"
+      maxlength="80"
+      required
+    >
+
+    <label for="whatsappInput">WhatsApp</label>
+    <input
+      type="tel"
+      id="whatsappInput"
+      name="whatsapp"
+      placeholder="(99) 99999-9999"
+      inputmode="tel"
+      maxlength="16"
+      required
+    >
+
+    <label for="cidade">Cidade</label>
+    <div class="cidade-autocomplete">
+      <input
+        type="text"
+        id="cidade"
+        name="cidade"
+        placeholder="Sua cidade"
+        autocomplete="off"
+        maxlength="80"
+        required
+      >
+      <div class="cidade-sugestoes" id="cidadeSugestoes" hidden></div>
+    </div>
+
+    <label for="espaco">Espaço disponível</label>
+    <select id="espaco" name="espaco">
+      <option value="pequeno">Pequeno (até 9m²)</option>
+      <option value="medio">Médio (12m² a 23m²)</option>
+      <option value="grande">Grande (acima de 30m²)</option>
+    </select>
+
+    <label for="tipo">Tipo de piscina</label>
+    <select id="tipo" name="tipo">
+      <option value="simples">Simples</option>
+      <option value="luxo">Luxo</option>
+    </select>
+
+    <label for="orcamento">Orçamento disponível</label>
+    <select id="orcamento" name="orcamento">
+      <option value="ate10mil">Até 10.000</option>
+      <option value="10a30mil">Entre 10 a 30 mil</option>
+      <option value="acima40mil">Acima de 40 mil</option>
+    </select>
+
+    <label for="espacoPronto">O espaço já está pronto?</label>
+    <select id="espacoPronto" name="espacoPronto">
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label for="prazoCompra">Quando pretende comprar?</label>
+    <select id="prazoCompra" name="prazoCompra">
+      <option value="agora">Agora</option>
+      <option value="1a3meses">De 1 a 3 meses</option>
+      <option value="mais3meses">Mais de 3 meses</option>
+      <option value="pesquisando">Só pesquisando</option>
+    </select>
+
+    <button type="submit" id="submitButton">Ver recomendação</button>
+    <p class="form-status" id="formStatus" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="como-funciona">
+  <h2>Como funciona</h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <span>1</span>
+      <h3>Informe seu contato</h3>
+      <p>Digite seu WhatsApp para registrar o atendimento.</p>
+    </div>
+    <div class="step-card">
+      <span>2</span>
+      <h3>Escolha o perfil</h3>
+      <p>Selecione o espaço, o estilo, o orçamento e o prazo de compra.</p>
+    </div>
+    <div class="step-card">
+      <span>3</span>
+      <h3>Receba a recomendação</h3>
+      <p>Veja o modelo sugerido e fale direto com o atendimento.</p>
+    </div>
+  </div>
+</section>
+
+<section class="destaques">
+  <h2>Modelos em destaque</h2>
+  <div class="destaques-grid">
+    <article class="destaque-card">
+      <img src="img/destaque/praia.jpg" alt="Praia 31">
+      <h3>Praia 31</h3>
+      <p>8,00 x 3,80 x 1,40m</p>
+      <small>Grande e confortável</small>
+      <a class="btn-destaque" href="https://wa.me/5532998167347?text=Olá%2C%20tenho%20interesse%20na%20piscina%20Praia%2031." target="_blank" rel="noopener noreferrer">Adquira já!</a>
+    </article>
+    <article class="destaque-card destaque-prime">
+      <img src="img/destaque/379254-swimmingpool-prime.jpg" alt="Prime 35">
+      <h3>Prime 35</h3>
+      <p>10,67 x 4,14 x 1,84m</p>
+      <small>Luxo com spa</small>
+      <a class="btn-destaque" href="https://wa.me/5532998167347?text=Olá%2C%20tenho%20interesse%20na%20piscina%20Prime%2035." target="_blank" rel="noopener noreferrer">Adquira já!</a>
+    </article>
+    <article class="destaque-card">
+      <img src="img/destaque/379291-piscina-nado-livre.jpg" alt="Nado Livre 5">
+      <h3>Nado Livre 5</h3>
+      <p>5,00 x 2,40 x 1,35m</p>
+      <small>Custo-benefício ideal</small>
+      <a class="btn-destaque" href="https://wa.me/5532998167347?text=Olá%2C%20tenho%20interesse%20na%20piscina%20Nado%20Livre%205." target="_blank" rel="noopener noreferrer">Adquira já!</a>
+    </article>
+  </div>
+</section>
+
+<section class="cores-disponiveis">
+  <div class="cores-header">
+    <h2>Granitada</h2>
+    <p>Simule nossas cores com efeito granito</p>
+  </div>
+  <div class="cores-simulator">
+    <div class="pool-preview-column">
+      <div class="pool-preview">
+        <img
+          id="poolPreviewImage"
+          src="img/seletordecores/azulex.png"
+          alt="Visualização da piscina na cor Azul"
+        >
+      </div>
+      <div class="pool-preview-info">
+        <span>Cor selecionada</span>
+        <strong id="poolPreviewName">Azul</strong>
+      </div>
+    </div>
+
+    <div class="cores-grid">
+      <button class="cor-card" type="button" data-color-name="Ocean Grey" data-pool-image="img/seletordecores/oceangrayex_1.png">
+        <img src="img/cores/379059-ocean-grey-platinum.jpg" alt="Paleta Ocean Grey">
+        <span>Ocean Gray Platinum</span>
+      </button>
+      <button class="cor-card" type="button" data-color-name="Deep Blue" data-pool-image="img/seletordecores/deep blue ex.png">
+        <img src="img/cores/379054-deep-blue-platinum.jpg" alt="Paleta Deep Blue">
+        <span>Deep Blue Platinum</span>
+      </button>
+      <button class="cor-card" type="button" data-color-name="Sky Blue" data-pool-image="img/seletordecores/skyblue ex.png">
+        <img src="img/cores/379061-sky-blue-70dpi.jpg" alt="Paleta Sky Blue">
+        <span>Sky Blue</span>
+      </button>
+      <button class="cor-card" type="button" data-color-name="Verde" data-pool-image="img/seletordecores/hijauex_1.png">
+        <img src="img/cores/379067-hijau-70dpi.jpg" alt="Paleta verde">
+        <span>Hijau</span>
+      </button>
+      <button class="cor-card" type="button" data-color-name="Pérola" data-pool-image="img/seletordecores/perolaex.png">
+        <img src="img/cores/379071-perola-70dpi.jpg" alt="Paleta Pérola">
+        <span>Pérola</span>
+      </button>
+      <button class="cor-card ativo" type="button" data-color-name="Azul" data-pool-image="img/seletordecores/azulex.png">
+        <img src="img/cores/305528-paleta-azul-70dpi.jpg" alt="Paleta azul">
+        <span>Azul</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<a id="catalogo" href="./catalogo.html">Catálogo</a>
+
+<a id="instagram" href="https://www.instagram.com/fiberpiscinasvicosa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <img src="img/instagram.png" alt="Instagram">
+</a>
+
+<a id="whatsapp" href="https://wa.me/5532998167347" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <img src="img/whatsapp.png" alt="WhatsApp">
+</a>
+
+</main>
+
+<section class="resultado" id="resultado">
+  <div class="card">
+    <button class="fechar-modal" type="button" onclick="fecharModal()">x</button>
+    <img id="imgPiscina" src="" alt="">
+    <h2 id="nomePiscina"></h2>
+    <p id="infoPiscina"></p>
+    <div class="card-actions">
+      <a id="whatsapp-modal" href="https://wa.me/5532998167347" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        <img src="img/whatsapp.png" alt="WhatsApp"> Fazer orçamento
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <section class="sobre-fiber">
+    <h2>Sobre a Fiber</h2>
+    <p class="sobre-intro">
+      Reconhecida no mercado brasileiro, a Fiber combina tecnologia, acabamento e variedade para entregar piscinas com visual sofisticado, instalação prática e ótimo desempenho no dia a dia.
+    </p>
+    <div class="sobre-grid">
+      <article class="sobre-card">
+        <span class="sobre-tag">Destaque</span>
+        <h3>Alta durabilidade com estrutura reforçada</h3>
+      </article>
+      <article class="sobre-card">
+        <span class="sobre-tag">Agilidade</span>
+        <h3>Instalação rápida e sem obra longa</h3>
+      </article>
+      <article class="sobre-card">
+        <span class="sobre-tag">Acabamento</span>
+        <h3>Acabamento premium com brilho duradouro</h3>
+      </article>
+      <article class="sobre-card">
+        <span class="sobre-tag">Economia</span>
+        <h3>Fácil manutenção e economia no dia a dia</h3>
+      </article>
+    </div>
+  </section>
+  <p>Projeto Integrador - Fiber Piscinas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
